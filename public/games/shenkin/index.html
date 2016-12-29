@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>דחוף את הבירה</title>
+        
+        <!-- Google Tag Manager -->
+        <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WGTCJL');
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <meta name="Title" content="דחוף את הבירה" />
+        <meta name="description" content="שחקו ותוכלו לזכות בשתיה חינם!">
+		<meta name="keywords" content="שנקין, בר, מטבח, וודקה, בירה, ואן גוך">
+        
+        <!-- for Facebook -->
+        <meta property="og:title" content="דחוף את הבירה"/>
+        <meta property="og:site_name" content="דחוף את הבירה"/>
+        <meta property="og:image" content="http://playkit.xyz/games/shenkin/fbshare.jpg" />
+        <meta property="og:url" content="http://playkit.xyz/games/shenkin/?source=facebookShare" />
+        <meta property="og:description" content="שחקו ותוכלו לזכות בשתיה חינם!">
+        
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> -->
+
+        <meta id="viewport" name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+
+		<script>
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    "@-ms-viewport{width:device-width}"
+                )
+            );
+            document.getElementsByTagName("head")[0].
+                appendChild(msViewportStyle);
+        }
+        </script>
+
+        
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="icon" type="image/png" href="assets/icons/android-chrome-192x192" sizes="192x192">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon" /> 
+
+        <link rel="stylesheet" href="css/normalize.css?v=2016112101">
+        <link rel="stylesheet" href="css/main.css?v=2016112101">
+        <script src="js/vendor/modernizr-2.6.2.min.js?v=2016112101"></script>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGTCJL"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <!-- PERCENT LOADER START-->
+    	<div id="mainLoader"><img src="assets/loader.png" /><br/><span>0</span></div>
+        <!-- PERCENT LOADER END-->
+        
+        <!-- CONTENT START-->
+        <div id="mainHolder">
+        
+        	<!-- BROWSER NOT SUPPORT START-->
+        	<div id="notSupportHolder">
+                <div class="notSupport">הדפדפן שלכם לא נתמך.<br/>אנא עדכנו את הדפדפן בשביל לשחק את המשחק</div>
+            </div>
+            <!-- BROWSER NOT SUPPORT END-->
+            
+            <!-- ROTATE INSTRUCTION START-->
+            <div id="rotateHolder">
+                <div class="mobileRotate">
+                        <div class="rotateDesc">אנא סובבו את המכשיר <br/>למצב רוחבי</div>
+                </div>
+            </div>
+            <!-- ROTATE INSTRUCTION END-->
+            
+            <!-- CANVAS START-->
+            <div id="canvasHolder">
+                <div id="gameFlash"></div>
+                <canvas id="gameCanvas" width="1200" height="768"></canvas>
+            </div>
+            <!-- CANVAS END-->
+            
+            <!-- LEADS INTRO MESSAGE -->
+            <div id="introMessageContainer" style="display: none;">
+                <div id="introMessage">
+                    <div id="introMessageClose"></div>
+                    <div id="introMessageContent">
+                        <h2>ברוכים הבאים למשחק ששיכר את המדינה</h2>
+                        <p>
+                            רוצים לזכות בפרסים שווים בשנקין בר?<br />
+                            דחפו את הכוסות והבקבוקים עד אחרי הקו האדום מבלי שיפלו מהבר!                        
+                        </p>
+                        <p>
+                            השגתם פחות מ-500 נק'? - המשיכו להתאמן :)<br />
+                            השגתם מעל 500 נק'? - אתם שיכורים מצטיינים - קיבלתם שלושה צ'ייסרים במתנה!<br />
+                            השגתם מעל 800 נק'? - אתם שיכורים מקצועיים - קיבלתם כרטיס למסיבת הסילבסטר שלנו!
+                        </p>
+                        <p>
+                            <b>הפרסים יחלוקו למשתמשים בני 18 ומעלה, ואינם ניתנים להעברה</b>
+                            <br>
+                            השתתפותכם במשחק מהווה הסכמה <a href="./terms/" target="_blank" onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;">לתנאי השימוש</a>
+                        </p>
+                        <p>
+                            <u>שימו לב</u>: כדי לקבל את הפרס עליכם לשתף בתום המשחק את התוצאה שהשגתם בפייסבוק ולמלא פרטים. ניתן לממש את הפרס אחת ליום ועד גמר המלאי, אז קדימה להזדרז!<br />
+                            <b>בהצלחה!</b>
+                        </p>
+                    </div>                
+                </div>
+            </div>
+            <!-- LEADS INTRO MESSAGE -->
+
+            <!-- LEADS FORM START -->
+            <div id="leadsForm">
+                <div id="leadsFormClose"></div>
+                <div id="leadsFormContent"></div>                
+            </div>
+            <!-- LEADS FORM END -->
+
+        </div>
+        <!-- CONTENT END-->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+        
+        <script>
+        function raiseGaEvent(_event, _desc, _dynamic, _nonInteraction) {
+            //google analytics id  - global var
+            var GA_TRACK_ID = 'UA-84607224-1';
+
+            ga('create', GA_TRACK_ID, 'auto');  
+            ga('send', 'event', 'shenkin bar game', _event, _desc, _dynamic, {'nonInteraction': _nonInteraction });
+        }
+        </script>
+        
+        <script src="js/vendor/detectmobilebrowser.js?v=2016112101"></script>
+        <script src="js/vendor/jquery.touchSwipe.min.js?v=2016112101"></script>
+        <script src="js/vendor/createjs-2015.11.26.min.js?v=2016112101"></script>
+        <script src="js/vendor/TweenMax.min.js?v=2016112101"></script>
+        
+        <script src="js/plugins.js?v=2016112101"></script>
+        <script src="js/sound.js?v=2016112101"></script>
+        <script src="js/canvas.js?v=2016112101"></script>
+        <script src="js/game.js?v=2016112101"></script>
+        <script src="js/mobile.js?v=2016112101"></script>
+        <script src="js/main.js?v=2016112101"></script>
+        <script src="js/loader.js?v=2016112101"></script>
+        <script src="js/init.js?v=2016112101"></script>
+    </body>
+</html>

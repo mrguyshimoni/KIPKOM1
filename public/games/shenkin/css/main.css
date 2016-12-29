@@ -1,0 +1,496 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,button,input,select,textarea {
+  color:#222;
+}
+
+html, body {
+  font-size:1em;
+  line-height:1.4;
+  direction: rtl;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,canvas,img,video {
+  vertical-align:middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border:0;
+  margin:0;
+  padding:0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize:vertical;
+}
+
+/* ==========================================================================
+   Main styles
+   ========================================================================== */
+   
+@font-face {
+    font-family: 'Alef';
+    src: url('Alef-Bold.eot');
+    src: url('Alef-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Alef-Bold.woff') format('woff'),
+        url('Alef-Bold.ttf') format('truetype'),
+        url('Alef-Bold.svg#alefbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Alef';
+    src: url('Alef-Regular.eot');
+    src: url('Alef-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Alef-Regular.woff') format('woff'),
+        url('Alef-Regular.ttf') format('truetype'),
+        url('Alef-Regular.svg#alefregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-select: none;-webkit-touch-callout:none; background:#929786;}
+
+/*-- Percent Loader -- */
+#mainLoader{position:absolute;z-index:5; display:none; font-size:30px; line-height:30px; color:#fff; text-align:center; width:100%; font-family:'Alef';}
+
+/*-- Content Wrapper -- */
+#mainHolder{position:absolute; width:100%;height:100%;}
+
+/*-- Browser Not Support -- */
+#notSupportHolder{ width:90%; margin:5% auto; position:relative; color:#FFF; text-align:center; font-size:25px; font-family:'Alef'; display:none;}
+.notSupport{margin-top:200px;}
+
+/*-- Mobile Rotate Instruction -- */
+#rotateHolder{position:absolute;width:100%;height:100%;background-color:#929786;z-index:1000; display:none;}
+.mobileRotate{width:200px;height:auto;position:absolute;text-align:center;}
+.rotateDesc{color:#fff; font-size:15px; line-height:15px; font-family:'neutonregular';}
+
+/*-- Canvas Wrapper -- */
+#canvasHolder{ display:none; width:100%; max-width:1200px; height:100%; margin:auto; position:relative;}
+#gameCanvas{ position:absolute;z-index: 10;}
+#gameFlash{ display: none; position:absolute;z-index: 20;width:100%;height:100%;background-color: rgba(255,252,100,0.7);}
+.hideCursor{cursor:none;};
+
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,.clearfix:after{
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after{
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix{
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print{
+  * {
+    background:transparent!important;
+    color:#000!important;
+    box-shadow:none!important;
+    text-shadow:none!important;
+  }
+
+  a,a:visited {
+    text-decoration:underline;
+  }
+
+  a[href]:after {
+    content:" (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content:" (" attr(title) ")";
+  }
+
+  .ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after {
+    content:"";
+  }
+
+  pre,blockquote {
+    border:1px solid #999;
+    page-break-inside:avoid;
+  }
+
+  thead {
+    display:table-header-group;
+  }
+
+  tr,img {
+    page-break-inside:avoid;
+  }
+
+  img {
+    max-width:100%!important;
+  }
+
+  @page {
+    margin:.5cm;
+  }
+
+  p,h2,h3 {
+    orphans:3;
+    widows:3;
+  }
+
+  h2,h3 {
+    page-break-after:avoid;
+  }
+}
+
+/* intro message */
+#introMessageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: none;
+  z-index: 100;
+}
+
+#introMessage {
+  position: absolute;
+  width: 74%;
+  height: 78%;
+  right: 10%;
+  top: 18%;
+  padding: 0 3%;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Alef';
+  font-size: 3.5vh;
+}
+
+#introMessageClose {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: -9%;
+  top: -9%;
+  background-image: url(../assets/close.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#introMessage h2 {
+  margin: .83em 0 0 0;
+}
+
+#introMessage p {
+  margin: .83em 0 0 0;
+}
+
+
+/* leads form */
+#leadsForm {
+  position: absolute;
+  width: 74%;
+  height: 75%;
+  right: 10%;
+  top: 18%;
+  padding: 0 3%;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Alef';
+  font-size: 2vw;
+  z-index: 2000;
+  
+  display: none;
+}
+
+#leadsFormClose {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: -9%;
+  top: -9%;
+  background-image: url(../assets/close.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#leadsFormContent {
+  overflow: auto;
+  float: none;
+  display: block;
+  height: 100%;
+}
+
+.leadsFormRow {
+    width: 50%;
+    float: right; 
+}
+
+.leadsFormRow label {
+    display: block;
+    margin-top: 4%;
+    margin-bottom: 1%;
+    color: #000;
+    font-family: 'Alef';
+    font-size: 3vw;
+}
+
+.leadsFormRow input {
+    display: block;
+    background-color: transparent;
+    border: solid 1px #000;
+    color: #000;
+    font-family: 'Alef';
+    padding: 0 2%;
+    font-size: 3vw;
+}
+
+.leadsFormFullRow {
+    width: 100%;
+    float: right; 
+    text-align: center;
+}
+
+#submit {
+  display: inline;
+  color: #000;
+  border:solid 1px #000;
+  width: 40%;
+  margin-left: 2%;
+  margin-top: 4%;
+  background-color: #9ECC80;
+  font-size: 3vw;
+  font-family: 'Alef';
+}
+
+#leadsFormResponse {
+  color: #000;
+  text-align: center;
+  margin-top: 15%;
+  font-size: 3vw;
+  font-family: 'Alef';
+  padding: 0 5%;
+}
+
+#leadsFormReminder {
+  color: #000;
+  text-align: center;
+  margin-top: 6%;
+  font-size: 2vw;
+  font-family: 'Alef';
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+#leadsFormLoader {
+    background-image: url('../assets/mug4.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;  
+    width: 40%;
+    height: 40%;
+    margin: 15% auto 0;
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 1500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 1500ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+#termsHolder {
+  background-image: url('../assets/shenkin_logo.png');
+  background-repeat: no-repeat;
+  background-position: center 1%;
+  background-size: 12%;
+  padding: 12% 0;
+}
+
+#termsHolder>h1 {
+   padding: 10% auto 4% auto;
+   text-align: center;
+}
+
+#terms {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 70%;
+  background-color: #fff;
+  border:solid 0px black;
+  border-radius: 30px;
+  padding: 2% 5% 5% 5%;
+}
